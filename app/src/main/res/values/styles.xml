@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Kekod.CompoundButton.MaterialSwitch" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="trackTint">@color/switch_selector</item>
+        <item name="thumbTint">@color/white</item>
+        <item name="switchPadding">@dimen/padding_8</item>
+    </style>
+</resources>

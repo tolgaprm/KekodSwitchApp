@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KekodSwitchApp</string>
+    <string name="happinness">Happiness</string>
+    <string name="optimism">Optimism</string>
+    <string name="kidness">Kidness</string>
+    <string name="giving">Giving</string>
+    <string name="Respect">Respect</string>
+    <string name="ego">Ego</string>
 </resources>
