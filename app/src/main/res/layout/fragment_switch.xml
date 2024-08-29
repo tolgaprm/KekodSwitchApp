@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/padding_8"
-    tools:context=".SwitchFragment">
+    tools:context=".switch_main.SwitchFragment">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swHappinness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/happinness"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/swOptimism"
@@ -23,6 +24,7 @@
         android:id="@+id/swOptimism"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/optimism"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/swKindness"
@@ -34,6 +36,7 @@
         android:id="@+id/swKindness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/kidness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -46,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
+        android:enabled="false"
         android:text="@string/giving"
         app:layout_constraintEnd_toStartOf="@+id/swRespect"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,6 +60,7 @@
         android:id="@+id/swRespect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/Respect"
         app:layout_constraintEnd_toStartOf="@+id/swEgo"
         app:layout_constraintHorizontal_bias="0.5"
