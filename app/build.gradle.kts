@@ -51,4 +51,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.glide)
+
+    testImplementation(libs.turbine)
+    testImplementation(libs.assertK)
+
+    testImplementation(libs.kotlinx.coroutines.test)
 }
