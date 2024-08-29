@@ -1,19 +1,19 @@
-package com.prmto.kekodswitchapp.switch_main
+package com.prmto.kekodswitchapp.ui.switch_main
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.prmto.kekodswitchapp.R
-import com.prmto.kekodswitchapp.SharedViewModel
 import com.prmto.kekodswitchapp.SwitchState
 import com.prmto.kekodswitchapp.databinding.FragmentSwitchBinding
-import com.prmto.kekodswitchapp.switch_main.Emotion.EGO
-import com.prmto.kekodswitchapp.switch_main.Emotion.GIVING
-import com.prmto.kekodswitchapp.switch_main.Emotion.HAPPINESS
-import com.prmto.kekodswitchapp.switch_main.Emotion.KINDNESS
-import com.prmto.kekodswitchapp.switch_main.Emotion.OPTIMISTIC
-import com.prmto.kekodswitchapp.switch_main.Emotion.RESPECT
+import com.prmto.kekodswitchapp.ui.SharedViewModel
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.EGO
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.GIVING
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.HAPPINESS
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.KINDNESS
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.OPTIMISTIC
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion.RESPECT
 import com.prmto.kekodswitchapp.util.collectFlow
 import com.prmto.kekodswitchapp.util.setEnableAndUncheck
 

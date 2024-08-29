@@ -1,10 +1,11 @@
-package com.prmto.kekodswitchapp
+package com.prmto.kekodswitchapp.ui
 
 import androidx.lifecycle.ViewModel
-import com.prmto.kekodswitchapp.switch_main.BottomNavItem
-import com.prmto.kekodswitchapp.switch_main.Emotion
-import com.prmto.kekodswitchapp.switch_main.toBottomNavItem
-import com.prmto.kekodswitchapp.switch_main.toEmotion
+import com.prmto.kekodswitchapp.SwitchState
+import com.prmto.kekodswitchapp.ui.switch_main.BottomNavItem
+import com.prmto.kekodswitchapp.ui.switch_main.Emotion
+import com.prmto.kekodswitchapp.ui.switch_main.toBottomNavItem
+import com.prmto.kekodswitchapp.ui.switch_main.toEmotion
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

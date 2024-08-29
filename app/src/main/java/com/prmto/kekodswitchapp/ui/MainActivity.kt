@@ -1,4 +1,4 @@
-package com.prmto.kekodswitchapp
+package com.prmto.kekodswitchapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,9 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.prmto.kekodswitchapp.R
 import com.prmto.kekodswitchapp.databinding.ActivityMainBinding
-import com.prmto.kekodswitchapp.switch_main.BottomNavItem
+import com.prmto.kekodswitchapp.ui.switch_main.BottomNavItem
 import com.prmto.kekodswitchapp.util.addItem
 import com.prmto.kekodswitchapp.util.collectFlow
 

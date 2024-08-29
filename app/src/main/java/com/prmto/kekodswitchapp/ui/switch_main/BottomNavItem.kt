@@ -1,4 +1,4 @@
-package com.prmto.kekodswitchapp.switch_main
+package com.prmto.kekodswitchapp.ui.switch_main
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
