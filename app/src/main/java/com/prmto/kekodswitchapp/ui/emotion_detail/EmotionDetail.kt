@@ -1,7 +1,6 @@
 package com.prmto.kekodswitchapp.ui.emotion_detail
 
 import com.prmto.kekodswitchapp.ui.switch_main.Emotion
-import java.util.UUID
 
 data class EmotionDetail(
     val emotion: Emotion,
@@ -12,7 +11,7 @@ data class EmotionDetail(
 )
 
 data class EmotionQuote(
-    val id: String = UUID.randomUUID().toString(),
+    val id: Int,
     val quote: String,
     val author: String,
 )

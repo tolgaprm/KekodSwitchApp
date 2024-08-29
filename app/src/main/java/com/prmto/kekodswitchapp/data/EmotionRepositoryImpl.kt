@@ -17,18 +17,22 @@ private val happinessDetail = EmotionDetail(
     emotionImageUrl = "https://neurosciencenews.com/files/2023/05/happiness-timing-neurosicenec.jpg",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 100,
             quote = "Mutluluk, başkalarının mutluluğunu istemektir.",
             author = "Aristoteles"
         ),
         EmotionQuote(
+            id = 101,
             quote = "Mutluluk hazır bir şey değildir. Kendi eylemlerinizden gelir.",
             author = "Dalai Lama"
         ),
         EmotionQuote(
+            id = 102,
             quote = "Hayatımınız amacı mutlu olmaktır.",
             author = "Dalai Lama"
         ),
         EmotionQuote(
+            id = 103,
             quote = "Mutluluk, düşündüğünüz, söylediğiniz ve yaptığınız şeylerin uyum içinde olduğu zamandır",
             author = "Mahatma Gandhi"
         )
@@ -42,14 +46,17 @@ private val optimisticDetail = EmotionDetail(
     emotionImageUrl = "https://www.verywellmind.com/thmb/Siin74YQnLckW2s_bBIv6W5qqzM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1189376727-9cee76278b104778bf76f2cb6dd20e51.jpg",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 104,
             quote = "Yüzünüzü her zaman güneşe doğru tutun—gölgeler arkanızda kalacaktır.",
             author = "Walt Whitman"
         ),
         EmotionQuote(
+            id = 105,
             quote = "Kötümser her fırsatta zorluk görür. İyimser her zorlukta fırsat görür.",
             author = "Winston Churchill"
         ),
         EmotionQuote(
+            id = 106,
             quote = "İyimserlik, başarıya götüren inançtır. Umut ve güven olmadan hiçbir şey yapılamaz.",
             author = "Helen Keller"
         )
@@ -63,14 +70,17 @@ private val kindessDetail = EmotionDetail(
     emotionImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl08xrf8obVz3a3d1mAZc-HWlV80Rgqgpo9g&s",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 107,
             quote = "Hiçbir nazik davranış, ne kadar küçük olursa olsun, boşa gitmez.",
             author = "Ezop"
         ),
         EmotionQuote(
+            id = 108,
             quote = "Naziklik, sağırların duyabileceği ve körlerin görebileceği dildir.",
             author = "Mark Twain"
         ),
         EmotionQuote(
+            id = 109,
             quote = "Tek bir nazik davranış, her yöne kökler atar ve bu kökler yeni ağaçlar oluşturur.",
             author = "Amelia Earhart"
         )
@@ -84,14 +94,17 @@ private val givingDetail = EmotionDetail(
     emotionImageUrl = "https://media.istockphoto.com/id/950835384/photo/mother-and-children-work-at-local-food-bank-together.jpg?s=612x612&w=0&k=20&c=_aSpx9n4oSHUFQyaAQLS-QWKw82tNYAtphuGH28n8jM%3D",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 110,
             quote = "Kendinizi bulmanın en iyi yolu, kendinizi başkalarına hizmet etmeye kaybetmektir.",
             author = "Mahatma Gandhi"
         ),
         EmotionQuote(
+            id = 111,
             quote = "Geçimimizi kazandıklarımızla sağlarız, ama hayatımızı verdiklerimizle yaparız.",
             author = "Winston Churchill"
         ),
         EmotionQuote(
+            id = 112,
             quote = "Vermek sadece bağış yapmakla ilgili değildir. Fark yaratmakla ilgilidir.",
             author = "Kathy Calvin"
         )
@@ -105,14 +118,17 @@ private val respectDetail = EmotionDetail(
     emotionImageUrl = "https://www.freshbooks.com/wp-content/uploads/2022/03/gain-respect-from-employees.jpg",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 113,
             quote = "Kendine saygı duy ve başkaları da sana saygı duyacaktır.",
             author = "Konfüçyüs"
         ),
         EmotionQuote(
+            id = 114,
             quote = "Herkesle aynı şekilde konuşurum, ister çöpçü olsun ister üniversite başkanı.",
             author = "Albert Einstein"
         ),
         EmotionQuote(
+            id = 115,
             quote = "Saygı, sevginin en büyük ifadelerinden biridir.",
             author = "Miguel Angel Ruiz"
         )
@@ -126,14 +142,17 @@ private val egoDetail = EmotionDetail(
     emotionImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6myp_hc3wLD3ijlChk3ev_9WIFH5aiw31Qw&s",
     emotionQuote = listOf(
         EmotionQuote(
+            id = 116,
             quote = "Ego, kendi evinde efendi değildir.",
             author = "Sigmund Freud"
         ),
         EmotionQuote(
+            id = 117,
             quote = "Bilgi arttıkça ego azalır. Bilgi azaldıkça ego artar.",
             author = "Albert Einstein"
         ),
         EmotionQuote(
+            id = 118,
             quote = "Egonun nihai amacı bir şey görmek değil, bir şey olmaktır.",
             author = "Muhammed İkbal"
         )
