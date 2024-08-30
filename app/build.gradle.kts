@@ -53,6 +53,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.glide)
+    implementation(libs.glide.compose)
 
     testImplementation(libs.turbine)
     testImplementation(libs.assertK)
