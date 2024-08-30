@@ -31,7 +31,7 @@ fun KekoBottomBar(
                 spotColor = MaterialTheme.colorScheme.onBackground,
                 ambientColor = MaterialTheme.colorScheme.onBackground
             )
-            .height(50.dp)
+            .height(60.dp)
     ) {
         bottomNavItems.take(5).forEach { item ->
             NavigationBarItem(

@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -26,8 +27,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.prmto.kekodswitchapp.R
 import com.prmto.kekodswitchapp.compose.components.KekoBottomBar
+import com.prmto.kekodswitchapp.compose.emotion_detail.EmotionDetailScreen
 import com.prmto.kekodswitchapp.compose.switch_main.SwitchMainScreen
 import com.prmto.kekodswitchapp.ui.SharedViewModel
+import com.prmto.kekodswitchapp.ui.emotion_detail.EmotionDetailViewModel
 import com.prmto.kekodswitchapp.ui.switch_main.Emotion
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -58,7 +61,11 @@ fun SwitchApp(
                 KekoBottomBar(
                     currentBackStackEntry = currentBackStackEntry,
                     bottomNavItems = bottomNavItems,
-                    onClickedBottomNavItem = navController::navigate
+                    onClickedBottomNavItem = {
+                        navController.navigate(it) {
+                            launchSingleTop = true
+                        }
+                    }
                 )
             }
         }
@@ -80,24 +87,37 @@ fun SwitchApp(
             }
 
             composable(route = Screen.Happiness.route) {
-
+                EmotionDetailRoute(emotion = Emotion.HAPPINESS)
             }
 
             composable(route = Screen.Optimism.route) {
-
+                EmotionDetailRoute(emotion = Emotion.OPTIMISTIC)
             }
 
             composable(route = Screen.Kindness.route) {
-
+                EmotionDetailRoute(emotion = Emotion.KINDNESS)
             }
 
             composable(route = Screen.Giving.route) {
-
+                EmotionDetailRoute(emotion = Emotion.GIVING)
             }
 
             composable(route = Screen.Respect.route) {
-
+                EmotionDetailRoute(emotion = Emotion.RESPECT)
             }
         }
+    }
+}
+
+@Composable
+fun EmotionDetailRoute(
+    emotion: Emotion
+) {
+    val detailViewModel: EmotionDetailViewModel = viewModel()
+    LaunchedEffect(key1 = Unit) {
+        detailViewModel.getEmotionDetail(emotion)
+    }
+    detailViewModel.emotionDetail.collectAsStateWithLifecycle().value?.let {
+        EmotionDetailScreen(emotionDetail = it)
     }
 }
