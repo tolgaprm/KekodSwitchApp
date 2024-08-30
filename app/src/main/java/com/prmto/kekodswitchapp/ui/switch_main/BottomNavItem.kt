@@ -39,7 +39,7 @@ enum class BottomNavItem(
         icon = R.drawable.ic_respect,
         textId = R.string.Respect,
         itemId = R.id.respectFragment,
-        route = Screen.Giving.route
+        route = Screen.Respect.route
     ),
     Ego(
         icon = R.drawable.ic_ego,
