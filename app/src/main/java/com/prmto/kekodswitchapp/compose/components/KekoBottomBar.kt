@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -25,6 +26,7 @@ fun KekoBottomBar(
 ) {
     BottomAppBar(
         modifier = modifier
+            .testTag(BOTTOM_BAR_TEST_TAG)
             .fillMaxWidth()
             .shadow(
                 elevation = 8.dp,
@@ -52,3 +54,5 @@ fun KekoBottomBar(
         }
     }
 }
+
+const val BOTTOM_BAR_TEST_TAG = "bottom_bar_test_tag"

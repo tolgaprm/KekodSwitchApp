@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import com.prmto.kekodswitchapp.R
@@ -30,6 +31,7 @@ fun SwitchItem(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Switch(
+            modifier = Modifier.testTag(emotion.name),
             checked = switchStates.find { it.emotion == emotion }?.isSwitchChecked ?: false,
             onCheckedChange = { onCheckedSwitch(emotion, it) },
             enabled = switchStates.find { it.emotion == emotion }?.isEnabled ?: false,
