@@ -18,7 +18,14 @@ class SharedViewModel : ViewModel() {
 
     private val _switchState: MutableStateFlow<List<SwitchState>> = MutableStateFlow(
         listOf(
-            SwitchState(Emotion.EGO, true)
+            SwitchState(Emotion.EGO, true, true),
+            SwitchState(Emotion.HAPPINESS, false, false),
+            SwitchState(Emotion.OPTIMISTIC, false, false),
+            SwitchState(Emotion.KINDNESS, false, false),
+            SwitchState(Emotion.GIVING, false, false),
+            SwitchState(
+                Emotion.RESPECT, false, false
+            ),
         )
     )
     val switchState: StateFlow<List<SwitchState>> = _switchState.asStateFlow()
@@ -47,6 +54,32 @@ class SharedViewModel : ViewModel() {
 
         if (emotion == Emotion.EGO) {
             _showBottomBar.value = !isSwitchChecked
+            if (isSwitchChecked) {
+                _switchState.update {
+                    it.map {
+                        if (it.emotion != Emotion.EGO) {
+                            it.copy(
+                                isSwitchChecked = false,
+                                isEnabled = false
+                            )
+                        } else {
+                            it
+                        }
+                    }
+                }
+            } else {
+                _switchState.update {
+                    it.map {
+                        if (it.emotion != Emotion.EGO) {
+                            it.copy(isEnabled = true)
+                        } else {
+                            it
+                        }
+                    }
+                }
+
+                _bottomNavMenuItems.update { listOf(BottomNavItem.Ego) }
+            }
             return
         }
 

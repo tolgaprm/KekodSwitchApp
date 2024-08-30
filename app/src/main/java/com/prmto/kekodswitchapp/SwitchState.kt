@@ -4,5 +4,6 @@ import com.prmto.kekodswitchapp.ui.switch_main.Emotion
 
 data class SwitchState(
     val emotion: Emotion,
-    val isSwitchChecked: Boolean
+    val isSwitchChecked: Boolean,
+    val isEnabled: Boolean
 )

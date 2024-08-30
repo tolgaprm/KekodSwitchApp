@@ -10,14 +10,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.bumptech.glide.Glide
 import com.google.android.material.switchmaterial.SwitchMaterial
+import com.prmto.kekodswitchapp.SwitchState
 import com.prmto.kekodswitchapp.ui.switch_main.BottomNavItem
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
-fun SwitchMaterial.setEnableAndUncheck(isEnable: Boolean) {
-    isEnabled = isEnable
-    isChecked = false
+fun SwitchMaterial.setCheckedAndEnabled(switchState: SwitchState) {
+    this.isChecked = switchState.isSwitchChecked
+    this.isEnabled = switchState.isEnabled
 }
 
 fun ImageView.loadImage(url: String) {
