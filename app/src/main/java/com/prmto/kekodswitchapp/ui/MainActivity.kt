@@ -1,12 +1,16 @@
 package com.prmto.kekodswitchapp.ui
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.prmto.kekodswitchapp.R
+import com.prmto.kekodswitchapp.compose.SwitchApp
 import com.prmto.kekodswitchapp.databinding.ActivityMainBinding
 import com.prmto.kekodswitchapp.ui.switch_main.BottomNavItem
 import com.prmto.kekodswitchapp.util.addItem
@@ -20,6 +24,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setComposeVersion()
+    }
+
+    private fun setComposeVersion() {
+        setContent {
+            SwitchApp(
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+    }
+
+    private fun setViewVersion() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         viewModel = ViewModelProvider(this)[SharedViewModel::class.java]
