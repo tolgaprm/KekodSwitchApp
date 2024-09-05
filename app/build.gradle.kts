@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.glide.compose)
     implementation(libs.splash)
+    implementation(libs.lottie)
+    implementation(libs.lottie.compose)
 
     testImplementation(libs.turbine)
     testImplementation(libs.assertK)

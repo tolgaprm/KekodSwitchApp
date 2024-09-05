@@ -4,8 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_screen_gradient"
     android:padding="@dimen/padding_8"
     tools:context=".ui.switch_main.SwitchFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/switch_background"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/switch_anim"
+        app:lottie_repeatMode="reverse" />
+
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swHappinness"
@@ -13,12 +30,9 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/happinness"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/swOptimism"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@+id/swKindness"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swOptimism"
@@ -26,11 +40,9 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/optimism"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/swKindness"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swHappinness"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/swEgo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swKindness"
@@ -38,23 +50,21 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/kidness"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/swGiving"
+        app:layout_constraintEnd_toStartOf="@+id/swEgo"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swOptimism"
-        app:layout_constraintTop_toTopOf="@+id/swOptimism" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swHappinness" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swGiving"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16"
         android:enabled="false"
         android:text="@string/giving"
-        app:layout_constraintEnd_toStartOf="@+id/swRespect"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swHappinness" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/swKindness"
+        app:layout_constraintTop_toBottomOf="@+id/swKindness" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swRespect"
@@ -62,10 +72,9 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/Respect"
-        app:layout_constraintEnd_toStartOf="@+id/swEgo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swGiving"
-        app:layout_constraintTop_toTopOf="@+id/swGiving" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/swEgo"
+        app:layout_constraintTop_toBottomOf="@+id/swEgo" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/swEgo"
@@ -73,9 +82,10 @@
         android:layout_height="wrap_content"
         android:checked="true"
         android:text="@string/ego"
+        app:layout_constraintBottom_toTopOf="@+id/swRespect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swRespect"
-        app:layout_constraintTop_toTopOf="@+id/swGiving" />
+        app:layout_constraintStart_toEndOf="@+id/swKindness"
+        app:layout_constraintTop_toBottomOf="@+id/swOptimism" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

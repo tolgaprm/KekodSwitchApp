@@ -5,5 +5,7 @@
         <item name="trackTint">@color/switch_selector</item>
         <item name="thumbTint">@color/white</item>
         <item name="switchPadding">@dimen/padding_8</item>
+        <item name="android:background">@drawable/switch_background</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineSmall</item>
     </style>
 </resources>
